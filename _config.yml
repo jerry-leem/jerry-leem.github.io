@@ -12,10 +12,10 @@ site_theme               : "default"
 title                    : "jerryan"
 title_separator          : "-"
 name                     : &name "Jerry Leem"
-description              : &description "less than more"
+description              : &description "반도체 산업, 기술, 실용적인 학습에 대한 기록."
 url                      : https://jerry-leem.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+repository               : "jerry-leem/jerry-leem.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -23,11 +23,11 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "75992617.jpeg"
-  name             : "less than more"
+  name             : "Jerry Leem"
   pronouns         : # example: "she/her"  
-  bio              : "Digital Normad"
+  bio              : "반도체 산업에서 일하며 기술, 일, 학습에 대한 생각을 기록합니다."
   location         : "South Korea"
-  employer         : "Semiconductor Business"
+  employer         : "Semiconductor Industry"
   uri              : # URL
   email            : "jerryan@gmail.com" 
 
