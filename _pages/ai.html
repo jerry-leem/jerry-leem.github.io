@@ -1,0 +1,19 @@
+---
+layout: archive
+permalink: /ai/
+title: "AI"
+author_profile: true
+---
+
+{% include base_path %}
+
+<p>AI와 관련된 글을 모아두는 공간입니다. 실무 활용, 도구 실험, 학습 메모, 사고 방식의 변화에 대한 기록을 정리할 예정입니다.</p>
+
+{% assign ai_posts = site.tags.ai %}
+{% if ai_posts and ai_posts.size > 0 %}
+  {% for post in ai_posts %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% else %}
+  <p>아직 등록된 글이 없습니다.</p>
+{% endif %}

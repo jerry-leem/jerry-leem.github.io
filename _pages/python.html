@@ -1,0 +1,19 @@
+---
+layout: archive
+permalink: /python/
+title: "파이썬"
+author_profile: true
+---
+
+{% include base_path %}
+
+<p>파이썬과 관련된 글을 모아두는 공간입니다. 자동화, 스크립트, 데이터 처리, 실무에서 바로 쓰는 작은 도구들에 대한 기록을 쌓아갈 예정입니다.</p>
+
+{% assign python_posts = site.tags.python %}
+{% if python_posts and python_posts.size > 0 %}
+  {% for post in python_posts %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% else %}
+  <p>아직 등록된 글이 없습니다.</p>
+{% endif %}
