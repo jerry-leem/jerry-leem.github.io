@@ -2,7 +2,7 @@
 title: "Streamlit을 쓰면서 느낀 점들"
 date: 2026-03-16
 categories:
-  - 기술
+  - Python
 tags:
   - python
   - streamlit

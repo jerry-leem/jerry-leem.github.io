@@ -2,7 +2,7 @@
 title: "나는 왜 계속 배우고 기록하는가"
 date: 2026-03-16
 categories:
-  - 소개
+  - Essay
 tags:
   - 자기소개
   - 반도체
