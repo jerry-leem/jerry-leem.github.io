@@ -1,0 +1,26 @@
+---
+layout: archive
+permalink: /topics/
+title: "주제별"
+author_profile: true
+---
+
+{% include base_path %}
+{% include group-by-array collection=site.posts field="categories" %}
+
+<p>글을 큰 주제 단위로 모아보는 페이지입니다. 상단 메뉴에는 핵심 탐색 축만 두고, 세부 분야는 여기에서 확장해 가는 구조로 운영합니다.</p>
+
+<p>현재 자주 다루는 주제는 <a href="{{ base_path }}/ai/">AI</a>와 <a href="{{ base_path }}/python/">파이썬</a>입니다. 앞으로 주제가 늘어나더라도 메뉴를 계속 늘리기보다, 이 페이지에서 카테고리 중심으로 정리합니다.</p>
+
+{% if group_names and group_names.size > 0 %}
+  {% for category in group_names %}
+    {% assign posts = group_items[forloop.index0] %}
+    <h2 id="{{ category | slugify }}" class="archive__subtitle">{{ category }}</h2>
+    <p>{{ posts | size }}개의 글</p>
+    {% for post in posts %}
+      {% include archive-single.html %}
+    {% endfor %}
+  {% endfor %}
+{% else %}
+  <p>아직 등록된 글이 없습니다.</p>
+{% endif %}

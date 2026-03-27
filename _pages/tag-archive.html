@@ -1,12 +1,14 @@
 ---
 layout: archive
 permalink: /tags/
-title: "Posts by Tags"
+title: "태그"
 author_profile: true
 ---
 
 {% include base_path %}
 {% include group-by-array collection=site.posts field="tags" %}
+
+<p>세부 기술이나 키워드 단위로 글을 찾는 페이지입니다. 카테고리가 큰 주제라면, 태그는 더 구체적인 탐색용 분류입니다.</p>
 
 {% for tag in group_names %}
   {% assign posts = group_items[forloop.index0] %}

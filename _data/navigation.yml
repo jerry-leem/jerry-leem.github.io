@@ -14,8 +14,8 @@ main:
   - title: "글 목록"
     url: /year-archive/
 
-  - title: "파이썬"
-    url: /python/
+  - title: "주제별"
+    url: /topics/
 
-  - title: "AI"
-    url: /ai/
+  - title: "태그"
+    url: /tags/
