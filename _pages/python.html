@@ -9,7 +9,9 @@ author_profile: true
 
 <p>파이썬과 관련된 글을 모아두는 공간입니다. 자동화, 스크립트, 데이터 처리, 실무에서 바로 쓰는 작은 도구들에 대한 기록을 쌓아갈 예정입니다.</p>
 
-{% assign python_posts = site.posts | where_exp: "post", "post.tags contains 'python' or post.categories contains 'Python'" %}
+{% assign python_tag_posts = site.posts | where_exp: "post", "post.tags contains 'python'" %}
+{% assign python_category_posts = site.posts | where_exp: "post", "post.categories contains 'Python'" %}
+{% assign python_posts = python_tag_posts | concat: python_category_posts | uniq %}
 {% if python_posts and python_posts.size > 0 %}
   {% for post in python_posts %}
     {% include archive-single.html %}

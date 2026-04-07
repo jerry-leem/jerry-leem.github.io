@@ -9,7 +9,9 @@ author_profile: true
 
 <p>AI와 관련된 글을 모아두는 공간입니다. 실무 활용, 도구 실험, 학습 메모, 사고 방식의 변화에 대한 기록을 정리할 예정입니다.</p>
 
-{% assign ai_posts = site.posts | where_exp: "post", "post.tags contains 'ai' or post.categories contains 'AI'" %}
+{% assign ai_tag_posts = site.posts | where_exp: "post", "post.tags contains 'ai'" %}
+{% assign ai_category_posts = site.posts | where_exp: "post", "post.categories contains 'AI'" %}
+{% assign ai_posts = ai_tag_posts | concat: ai_category_posts | uniq %}
 {% if ai_posts and ai_posts.size > 0 %}
   {% for post in ai_posts %}
     {% include archive-single.html %}
